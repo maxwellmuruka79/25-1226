@@ -1,3 +1,40 @@
+<style>
+p
+{
+  color:red;
+}
+</style>
+<style>
+h1
+{
+  color:blue;
+}
+</style>
+<style>
+h2
+{
+  color:purple;
+}
+</style>
+<style>
+h3
+{
+  color:green;
+}
+</style>
+Am a  boy jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj<br>jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
+<p>Am a boy</p>
+<h1>Am a bog</h1>
+<h2>Am a girl</h2>
+<h3>Am a boy</h3>
+
+<p>you</p>
+<p>you</p>
+<p>you</p>
+<p>you</p>
+<p>you</p>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +52,7 @@
 
     table {
       border-collapse: collapse;
-      width: 70%;
+      width: 90%;
       margin-bottom: 40px;
     }
 
@@ -26,35 +63,47 @@
     }
 
     /* Table 1 Styling */
-    #table1 th {
-      background-color: #456C9A;
-      color: orange;
+    #table1 tr:nth-child(1) {
+      background-color: #5a7dad; /* header */
+      color: white;
     }
 
     #table1 tr:nth-child(2) {
-      background-color: #d1f3f4;
+      background-color: #f8d7da;
     }
 
     #table1 tr:nth-child(3) {
-      background-color: #84e6ee;
+      background-color: #d4edda;
     }
 
     #table1 tr:nth-child(4) {
-      background-color: #4aa4d5;
+      background-color: #fff3cd;
+    }
+
+    #table1 tr:nth-child(5) {
+      background-color: #d1ecf1;
     }
 
     /* Table 2 Styling */
-    #table2 th {
+    #table2 tr:nth-child(1) {
       background-color: #0074cc;
       color: white;
     }
 
-    #table2 tr:nth-child(even) {
-      background-color: #e0efff;
+    #table2 tr:nth-child(2) {
+      background-color: #fde2e4;
     }
 
-    #table2 tr:nth-child(odd) {
-      background-color: #c8e6ff;
+    #table2 tr:nth-child(3) {
+      background-color: #e2f0cb;
+    }
+
+    #table2 tr:nth-child(4) {
+      background-color: #cfe2f3;
+    }
+
+    #table2 tr:nth-child(5) {
+      background-color: #fce5cd;
     }
   </style>
 </head>
@@ -67,24 +116,35 @@
       <th>Price</th>
       <th>Quantity</th>
       <th>Total</th>
+      <th>Category</th>
     </tr>
     <tr>
       <td>Tomatoes</td>
       <td>KES 50</td>
       <td>15</td>
       <td>KES 750</td>
+      <td>Vegetable</td>
     </tr>
     <tr>
       <td>Spinach</td>
       <td>KES 30</td>
       <td>20</td>
       <td>KES 600</td>
+      <td>Leafy Green</td>
     </tr>
     <tr>
       <td>Carrots</td>
       <td>KES 25</td>
       <td>25</td>
       <td>KES 625</td>
+      <td>Root</td>
+    </tr>
+    <tr>
+      <td>Peppers</td>
+      <td>KES 40</td>
+      <td>10</td>
+      <td>KES 400</td>
+      <td>Vegetable</td>
     </tr>
   </table>
 
@@ -95,24 +155,35 @@
       <th>Location</th>
       <th>Contacts</th>
       <th>Products</th>
+      <th>Size</th>
     </tr>
     <tr>
       <td>GreenFields</td>
       <td>Nyeri</td>
       <td>0712345678</td>
       <td>Tomatoes</td>
+      <td>5 Acres</td>
     </tr>
     <tr>
       <td>Sunrise Farm</td>
       <td>Embu</td>
       <td>0798765432</td>
       <td>Spinach</td>
+      <td>3 Acres</td>
     </tr>
     <tr>
       <td>Highland Growers</td>
       <td>Nakuru</td>
       <td>0700123456</td>
       <td>Carrots</td>
+      <td>4 Acres</td>
+    </tr>
+    <tr>
+      <td>Fresh Fields</td>
+      <td>Kiambu</td>
+      <td>0722233445</td>
+      <td>Peppers</td>
+      <td>6 Acres</td>
     </tr>
   </table>
 

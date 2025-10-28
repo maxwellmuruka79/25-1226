@@ -1,0 +1,50 @@
+<article>
+  <!-- YouTube video container -->
+  <div id="player"></div>
+
+  <p id="message" style="display:none; font-weight:bold; color:red; font-size:24px; text-align:center;">
+    hahaha got yaaaaaah 😆
+  </p>
+
+  <script>
+    // 1. Load the YouTube IFrame Player API
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    let player;
+
+    // 2. Create the player when API is ready
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        height: '300',
+        width: '500',
+        videoId: 'GMgsFZ4rkEI', // <-- YouTube video ID
+        playerVars: {
+          'controls': 1,
+          'rel': 0
+        },
+        events: {
+          'onStateChange': onPlayerStateChange
+        }
+      });
+    }
+
+    // 3. When user clicks the video, go fullscreen
+    document.addEventListener('click', function (event) {
+      if (event.target.closest('#player')) {
+        const iframe = document.querySelector('#player');
+        if (iframe.requestFullscreen) iframe.requestFullscreen();
+      }
+    });
+
+    // 4. When video ends, exit fullscreen and show the message
+    function onPlayerStateChange(event) {
+      if (event.data === YT.PlayerState.ENDED) {
+        document.exitFullscreen?.();
+        document.getElementById("message").style.display = "block";
+      }
+    }
+  </script>
+</article>
